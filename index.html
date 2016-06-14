@@ -448,8 +448,10 @@ $ git clone https://github.com/iissnan/hexo-theme-next themes/next
 </code></pre><p>这里以我的git地址作为例子，将其改为你自己新建的就好了。</p>
 <ul>
 <li><p>把图片放到本机你刚clone到的目录中。注意，是可以分目录来分类的，支持中文目录。然后，运行下面的命令</p>
-<p>  git add . //不要忘记最后的 .<br>  git commit -m “blog_img”<br>  git push origin master </p>
-<p> 至此，你的图片已经在GitHub服务器上了。但是只有原图，没有其他的尺寸，以后传之前先调整一下大小吧。</p>
+<pre><code>git add . //不要忘记最后的 . 
+git commit -m &quot;blog_img&quot;    
+git push origin master 
+</code></pre><p> 至此，你的图片已经在GitHub服务器上了。但是只有原图，没有其他的尺寸，以后传之前先调整一下大小吧。</p>
 </li>
 <li><p>在你的images仓库中找到你需要的图片，如下图所示：<br><img src="https://github.com/hiMitty/images/raw/master/test.png" alt="此处输入图片的描述"><br> <strong>将网址中blob改为raw</strong>，即可使用。</p>
 <p> 如果你像我一样比较懒觉得输入三行命令比较烦的话可以定义一个别名alias：</p>
