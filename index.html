@@ -375,9 +375,8 @@ branch: master
 <h2 id="五、Hexo常用命令"><a href="#五、Hexo常用命令" class="headerlink" title="五、Hexo常用命令"></a>五、Hexo常用命令</h2><ul>
 <li>新建文章</li>
 </ul>
-<pre><code>    hexo new [template] &quot;Title&quot;  //新建标题为Title的文章
-其中template是可选参数，即文章模板，默认值为post。scaffolds路径下的文件就是模板文件，你可以新建或编辑现有模板。
-</code></pre><p>执行命令后，在source/_posts/下会生成Title.md文件，当然，也可以手动创建后缀为“.md”的文件，并用喜欢的markdown编辑器编辑。<br>本文使用作业部落的<a href="https://www.zybuluo.com/mdeditor" target="_blank" rel="external">Cmd MarkDown</a>编写的。</p>
+<pre><code>hexo new [template] &quot;Title&quot;  //新建标题为Title的文章
+</code></pre><p>其中template是可选参数，即文章模板，默认值为post。scaffolds路径下的文件就是模板文件，你可以新建或编辑现有模板。<br>执行命令后，在source/_posts/下会生成Title.md文件，当然，也可以手动创建后缀为“.md”的文件，并用喜欢的markdown编辑器编辑。<br>本文使用作业部落的<a href="https://www.zybuluo.com/mdeditor" target="_blank" rel="external">Cmd MarkDown</a>编写的。</p>
 <ul>
 <li>新建页面</li>
 </ul>
@@ -399,8 +398,8 @@ branch: master
 </ul>
 <pre><code>hexo clean
 </code></pre><h2 id="六、美化"><a href="#六、美化" class="headerlink" title="六、美化"></a>六、美化</h2><p>美化自然离不开主题，Hexo主题花样繁多，可以在<a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="external">Hexo Themes</a>找到你中意的主题。试过几种主题，个人比较中意<a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="external">Yilia</a>和<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">Next</a>这两款主题，本文主题使用的是Next。<br><a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">Next</a>有官方教程，讲解非常详细，包括添加评论、搜索等一应俱全，此处不再赘述。<br>至于如何应用其他主题，步骤大同小异，此处以<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">Next</a>为例：</p>
-<pre><code>    //进入博客根目录
-    $ cd your-hexo-site
+<pre><code>//进入博客根目录
+$ cd your-hexo-site
 //从Github上克隆主题到你博客theme里
 $ git clone https://github.com/iissnan/hexo-theme-next themes/next
 </code></pre><p>然后打开根目录下的_config.yml文件，搜索字段<code>theme</code>，将<code>theme</code>的值改为主题名字<code>Next</code>：</p>
@@ -426,9 +425,9 @@ $ git clone https://github.com/iissnan/hexo-theme-next themes/next
 <ul>
 <li>在GitHub上新建一个repository，使用下面的命令将其clone到本机你想要的目录中。</li>
 </ul>
-<pre><code>git clone git@github.com:himitty/images.git
-</code></pre><p>这里我以我的git地址作为例子，将其改为你自己新建的就好了。</p>
-<ul>
+<pre><code>        git clone git@github.com:himitty/images.git
+这里以我的git地址作为例子，将其改为你自己新建的就好了。
+</code></pre><ul>
 <li><p>把图片放到本机你刚clone到的目录中。注意，是可以分目录来分类的，支持中文目录。然后，运行下面的命令</p>
 <pre><code>git add . //不要忘记最后的 . 
 git commit -m &quot;blog_img&quot;    
