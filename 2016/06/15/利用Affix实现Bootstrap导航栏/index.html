@@ -91,7 +91,7 @@
 <meta property="og:site_name" content="Chven's Blog">
 <meta property="og:description" content="接触Bootstrap不久，在Bootstrap网站看文档时觉得左侧的导航栏不错，可以随着内容位置的改变而自动定位到导航栏的相应位置，比普通的胶囊式导航栏高大上很多，就想要去实现它。">
 <meta property="og:image" content="https://github.com/hiMitty/images/raw/master/bootstrap_affix.png">
-<meta property="og:updated_time" content="2016-06-15T12:25:27.145Z">
+<meta property="og:updated_time" content="2016-06-15T12:26:51.025Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="利用Affix实现Bootstrap导航栏">
 <meta name="twitter:description" content="接触Bootstrap不久，在Bootstrap网站看文档时觉得左侧的导航栏不错，可以随着内容位置的改变而自动定位到导航栏的相应位置，比普通的胶囊式导航栏高大上很多，就想要去实现它。">
@@ -342,10 +342,11 @@
                         }
                 }
     })
-</code></pre><h2 id="通过-CSS-定位"><a href="#通过-CSS-定位" class="headerlink" title="通过 CSS 定位"></a><strong>通过 CSS 定位</strong></h2><p>在上面两种使用附加导航（Affix）插件的方式中，您都必须通过 CSS 定位内容。附加导航（Affix）插件在三种 class 之间切换，每种 class 都呈现了特定的状态： <em>.affix</em>、.<em>affix-top</em> 和 <em>.affix-bottom</em>。请按照下面的步骤，来为这三种状态设置您自己的 CSS（不依赖此插件）。</p>
-</li>
-<li><p>在开始时，插件添加 <strong>.affix-top</strong> 来指示元素在它的最顶端位置。这个时候不需要任何的 CSS 定位。</p>
-</li>
+</code></pre></li>
+</ul>
+<h2 id="通过-CSS-定位"><a href="#通过-CSS-定位" class="headerlink" title="通过 CSS 定位"></a><strong>通过 CSS 定位</strong></h2><p>在上面两种使用附加导航（Affix）插件的方式中，您都必须通过 CSS 定位内容。附加导航（Affix）插件在三种 class 之间切换，每种 class 都呈现了特定的状态： <em>.affix</em>、.<em>affix-top</em> 和 <em>.affix-bottom</em>。请按照下面的步骤，来为这三种状态设置您自己的 CSS（不依赖此插件）。</p>
+<ul>
+<li>在开始时，插件添加 <strong>.affix-top</strong> 来指示元素在它的最顶端位置。这个时候不需要任何的 CSS 定位。</li>
 <li>当滚动经过添加了附加导航（Affix）的元素时，应触发实际的附加导航（Affix）。此时 <strong>.affix</strong> 会替代 <strong>.affix-top</strong>，同时设置 <strong>position: fixed;</strong>（由 Bootstrap 的 CSS 代码提供）。</li>
 <li>如果定义了底部偏移，当滚动到达该位置时，应把 <strong>.affix</strong> 替换为 <strong>.affix-bottom</strong>。由于偏移是可选的，假如设置了该偏移，则要求同时设置适当的 CSS。在这种情况下，请在必要的时候添加 <strong>position: absolute;</strong>。</li>
 </ul>
