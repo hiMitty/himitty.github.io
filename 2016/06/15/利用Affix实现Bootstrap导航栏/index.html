@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Bootstrap Affix," />
 
 
 
@@ -84,19 +84,18 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="description" content="接触Bootstrap不久，在Bootstrap网站看文档时觉得左侧的导航栏不错，可以随着内容位置的改变而自动定位到导航栏的相应位置，比普通的胶囊式导航栏高大上很多，就想要去实现它。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2016/06/14/hello-world/index.html">
+<meta property="og:title" content="利用Affix实现Bootstrap导航栏">
+<meta property="og:url" content="http://yoursite.com/2016/06/15/利用Affix实现Bootstrap导航栏/index.html">
 <meta property="og:site_name" content="Chven's Blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2016-06-14T08:05:16.842Z">
+<meta property="og:description" content="接触Bootstrap不久，在Bootstrap网站看文档时觉得左侧的导航栏不错，可以随着内容位置的改变而自动定位到导航栏的相应位置，比普通的胶囊式导航栏高大上很多，就想要去实现它。">
+<meta property="og:image" content="https://github.com/hiMitty/images/raw/master/bootstrap_affix.png">
+<meta property="og:updated_time" content="2016-06-15T12:01:21.069Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="利用Affix实现Bootstrap导航栏">
+<meta name="twitter:description" content="接触Bootstrap不久，在Bootstrap网站看文档时觉得左侧的导航栏不错，可以随着内容位置的改变而自动定位到导航栏的相应位置，比普通的胶囊式导航栏高大上很多，就想要去实现它。">
+<meta name="twitter:image" content="https://github.com/hiMitty/images/raw/master/bootstrap_affix.png">
 
 
 
@@ -117,9 +116,9 @@ Quick">
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/06/14/hello-world/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/06/15/利用Affix实现Bootstrap导航栏/"/>
 
-  <title> Hello World | Chven's Blog </title>
+  <title> 利用Affix实现Bootstrap导航栏 | Chven's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -248,7 +247,7 @@ Quick">
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-tags " itemscope itemtype="http://schema.org/Article">
 
     
       <header class="post-header">
@@ -259,7 +258,7 @@ Quick">
             
             
               
-                Hello World
+                利用Affix实现Bootstrap导航栏
               
             
           </h1>
@@ -271,19 +270,38 @@ Quick">
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-14T16:05:16+08:00" content="2016-06-14">
-              2016-06-14
+            <time itemprop="dateCreated" datetime="2016-06-15T19:59:27+08:00" content="2016-06-15">
+              2016-06-15
             </time>
           </span>
 
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
           
 
           
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/06/14/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/14/hello-world/" itemprop="commentsCount"></span>
+                <a href="/2016/06/15/利用Affix实现Bootstrap导航栏/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/15/利用Affix实现Bootstrap导航栏/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -306,15 +324,29 @@ Quick">
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <p>接触Bootstrap不久，在Bootstrap网站看文档时觉得左侧的导航栏不错，可以随着内容位置的改变而自动定位到导航栏的相应位置，比普通的胶囊式导航栏高大上很多，就想要去实现它。<br><img src="https://github.com/hiMitty/images/raw/master/bootstrap_affix.png" alt="此处输入图片的描述"></p>
+<a id="more"></a>
+<p>在网上找了好久，结果发现原来这个插件集成在Bootstrap中。真特么是骑驴找驴！</p>
+<p>在Bootstrap文档中找到<a href="http://v3.bootcss.com/javascript/#affix" target="_blank" rel="external">附加导航(Affix)插件</a></p>
+<h2 id="用法"><a href="#用法" class="headerlink" title="用法"></a><strong>用法</strong></h2><p>您可以通过 data 属性或者通过 JavaScript 来使用附加导航（Affix）插件。</p>
+<ul>
+<li><strong>通过 data 属性</strong>：如需向元素添加附加导航（Affix）行为，只需要向需要监听的元素添加 <strong>data-spy=”affix”</strong>      即可。请使用偏移来定义何时切换元素的锁定和移动。</li>
+</ul>
+<ul>
+<li><p><strong>通过 JavaScript</strong>：您可以通过 JavaScript 手动为某个元素添加附加导航（Affix），如下所示：</p>
+<p> $(‘#myAffix’).affix({<br>offset: {<br>   top: 100, bottom: function () {</p>
+<pre><code>return (this.bottom = 
+   $(&apos;.bs-footer&apos;).outerHeight(true))
+}
+</code></pre><p>   }<br>})</p>
+</li>
+</ul>
+<h2 id="通过-CSS-定位"><a href="#通过-CSS-定位" class="headerlink" title="通过 CSS 定位"></a><strong>通过 CSS 定位</strong></h2><p>在上面两种使用附加导航（Affix）插件的方式中，您都必须通过 CSS 定位内容。附加导航（Affix）插件在三种 class 之间切换，每种 class 都呈现了特定的状态： <em>.affix</em>、.<em>affix-top</em> 和 <em>.affix-bottom</em>。请按照下面的步骤，来为这三种状态设置您自己的 CSS（不依赖此插件）。</p>
+<ul>
+<li>在开始时，插件添加 <strong>.affix-top</strong> 来指示元素在它的最顶端位置。这个时候不需要任何的 CSS 定位。</li>
+<li>当滚动经过添加了附加导航（Affix）的元素时，应触发实际的附加导航（Affix）。此时 <strong>.affix</strong> 会替代 <strong>.affix-top</strong>，同时设置 <strong>position: fixed;</strong>（由 Bootstrap 的 CSS 代码提供）。</li>
+<li>如果定义了底部偏移，当滚动到达该位置时，应把 <strong>.affix</strong> 替换为 <strong>.affix-bottom</strong>。由于偏移是可选的，假如设置了该偏移，则要求同时设置适当的 CSS。在这种情况下，请在必要的时候添加 <strong>position: absolute;</strong>。</li>
+</ul>
 
       
     </div>
@@ -334,18 +366,24 @@ Quick">
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Bootstrap-Affix/" rel="tag">#Bootstrap Affix</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/06/14/使用Hexo-GitHub-Pages搭建自己的专属博客-一/" rel="next" title="使用Hexo＋Github Pages 来搭建自己的专属博客(一)">
+                <i class="fa fa-chevron-left"></i> 使用Hexo＋Github Pages 来搭建自己的专属博客(一)
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/06/14/使用Hexo-GitHub-Pages搭建自己的专属博客-一/" rel="prev" title="使用Hexo＋Github Pages 来搭建自己的专属博客(一)">
-                使用Hexo＋Github Pages 来搭建自己的专属博客(一) <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -360,10 +398,10 @@ Quick">
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/06/14/hello-world/"
-     data-title="Hello World"
+        <div class="ds-share flat" data-thread-key="2016/06/15/利用Affix实现Bootstrap导航栏/"
+     data-title="利用Affix实现Bootstrap导航栏"
      data-content=""
-     data-url="http://yoursite.com/2016/06/14/hello-world/">
+     data-url="http://yoursite.com/2016/06/15/利用Affix实现Bootstrap导航栏/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -390,8 +428,8 @@ Quick">
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/06/14/hello-world/"
-           data-title="Hello World" data-url="http://yoursite.com/2016/06/14/hello-world/">
+      <div class="ds-thread" data-thread-key="2016/06/15/利用Affix实现Bootstrap导航栏/"
+           data-title="利用Affix实现Bootstrap导航栏" data-url="http://yoursite.com/2016/06/15/利用Affix实现Bootstrap导航栏/">
       </div>
     
   </div>
@@ -482,7 +520,7 @@ Quick">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#用法"><span class="nav-number">1.</span> <span class="nav-text">用法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通过-CSS-定位"><span class="nav-number">2.</span> <span class="nav-text">通过 CSS 定位</span></a></li></ol></div>
             
           </div>
         </section>
