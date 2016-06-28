@@ -91,7 +91,7 @@
 <meta property="og:site_name" content="Chven's Blog">
 <meta property="og:description" content="今天在工作的时候遇到了几个有关Python的小问题，记录于此。">
 <meta property="og:image" content="http://images.cnitblog.com/blog/579913/201311/20114839-505f82ae3c34407dbf190ef424a95e19.jpg">
-<meta property="og:updated_time" content="2016-06-28T12:59:24.236Z">
+<meta property="og:updated_time" content="2016-06-28T13:02:53.212Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="有关Python的一些小技巧(一)">
 <meta name="twitter:description" content="今天在工作的时候遇到了几个有关Python的小问题，记录于此。">
@@ -327,12 +327,12 @@
         <p><strong>今天在工作的时候遇到了几个有关Python的小问题，记录于此。</strong></p>
 <a id="more"></a>
 <ul>
-<li><p>python 过滤中文、英文标点特殊符号<br>在工作中经常遇到很多特殊的标点符号，像中文标点符号，英文标点符号。英文的标点符号比较容易过滤，而过滤中文的标点符号较麻烦。下面是从邮件中过滤特殊符号的方式供参考。</p>
-<p> 下面是一封垃圾邮件的过滤实例：</p>
-<p> “想做/ 兼<em>职/学生</em>/ 的 、加,我Q：  1 5.  8 0. ！！？？  8 6 。0.  2。 3     有,惊,喜,哦”<br> 邮件中的“！？。、”都是中文的，而“/.”是英文的</p>
-<p> 下面是过滤方式：</p>
-</li>
+<li>python 过滤中文、英文标点特殊符号<br>在工作中经常遇到很多特殊的标点符号，像中文标点符号，英文标点符号。英文的标点符号比较容易过滤，而过滤中文的标点符号较麻烦。下面是从邮件中过滤特殊符号的方式供参考。</li>
 </ul>
+<p>下面是一封垃圾邮件的过滤实例：</p>
+<pre><code>&quot;想做/ 兼_职/学生_/ 的 、加,我Q：  1 5.  8 0. ！！？？  8 6 。0.  2。 3     有,惊,喜,哦&quot; 
+邮件中的“！？。、”都是中文的，而“/.”是英文的
+</code></pre><p>下面是过滤方式：</p>
 <pre><code>&lt;span style=&quot;font-size:18px;&quot;&gt;#-*-coding:utf-8-*-
 import re
 temp = &quot;想做/ 兼_职/学生_/ 的 、加,我Q：  1 5.  8 0. ！！？？  8 6 。0.  2。 3     有,惊,喜,哦&quot;
@@ -344,38 +344,38 @@ print string
 <pre><code>&lt;span style=&quot;font-size:18px;&quot;&gt;想做兼职学生的加我Q158086023有惊喜哦&lt;/span&gt;
 </code></pre><p>处理成上述格式后就容易进行分词分析处理了。</p>
 <ul>
-<li><p>Python List 合并连接字符串的方法</p>
-<p> 比如下面一个list</p>
-<p> binfo = [‘lao’,’wang’,’python’]</p>
-</li>
+<li>Python List 合并连接字符串的方法</li>
 </ul>
-<p>我们通过help方法得知，可以用string的join方法来解决。<br>下面我们通过空格来连接3个单词：</p>
+<p>比如下面一个list</p>
+<pre><code>binfo = [&apos;lao&apos;,&apos;wang&apos;,&apos;python&apos;]
+</code></pre><p>我们通过help方法得知，可以用string的join方法来解决。<br>下面我们通过空格来连接3个单词：</p>
 <pre><code>content = &quot; &quot;.join(binfo)
 print content
 </code></pre><p>结果是：</p>
 <pre><code>lao wang python
 </code></pre><ul>
-<li><p>ValueError: No JSON object could be decoded?此种异常的解决方案之一<br><img src="http://images.cnitblog.com/blog/579913/201311/20114839-505f82ae3c34407dbf190ef424a95e19.jpg" alt="此处输入图片的描述"><br> 第一次遇到这样的异常，实在不知道如何是好？进行了测试发现报错的json出没有问题，而且每次出现异常     的位置不一样</p>
-<p> 于是我认为这样的问题可能是因为程序执行过快，所以很简单的解决办法是：</p>
-<p> def deal_dealers_info(self):</p>
-<pre><code>province_list = self.get_province_list()    
-for province in province_list:
-    if province== None:
-        continue
-    province_name = province_list[province]
-    #print &apos;1--&apos; + province_name
-    #print &apos;2--&apos; + province
-    city_list = self.get_post_city_data(province)
-    for city in city_list:
-        print city_list[city]
-        print city
-</code></pre><p> 　　　　    import time</p>
-<pre><code>        time.sleep(1)#在此处将程序延迟一秒执行，就可以解决访问速度过快而造成的异常，里面的单位是秒，即1=1秒
-        self.get_post_dealers_data(province_name,city_list[city],city)
-self.saver.commit() 
-</code></pre></li>
+<li>ValueError: No JSON object could be decoded?此种异常的解决方案之一<br><img src="http://images.cnitblog.com/blog/579913/201311/20114839-505f82ae3c34407dbf190ef424a95e19.jpg" alt="此处输入图片的描述"></li>
 </ul>
+<p>第一次遇到这样的异常，实在不知道如何是好？进行了测试发现报错的json出没有问题，而且每次出现异常    的位置不一样</p>
+<p>于是我认为这样的问题可能是因为程序执行过快，所以很简单的解决办法是：</p>
+<pre><code>def deal_dealers_info(self):
+    province_list = self.get_province_list()    
+    for province in province_list:
+        if province== None:
+            continue
+        province_name = province_list[province]
+        #print &apos;1--&apos; + province_name
+        #print &apos;2--&apos; + province
+        city_list = self.get_post_city_data(province)
+        for city in city_list:
+            print city_list[city]
+            print city
 
+import time
+        time.sleep(1)#在此处将程序延迟一秒执行，就可以解决访问速度过快而造成的异常，里面的单位是秒，即1=1秒
+        self.get_post_dealers_data(province_name,city_list[city],city)
+    self.saver.commit() 
+</code></pre>
       
     </div>
 
